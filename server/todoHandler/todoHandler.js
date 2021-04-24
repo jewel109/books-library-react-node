@@ -17,7 +17,15 @@ const errHand = (req, res, err) => {
 }
 //get all todos
 router.get('/', async (req, res) => {
-
+    await Todo.find({status:"active"}).select({
+        _id:0
+    }).exec((err ,data) => {
+        res.status(200).json({
+					message: "succes",
+					result: data,
+				});
+    })
+    
 })
 
 //get a todo
