@@ -12,8 +12,9 @@ const app = express();
 app.use(express.json())
 
 app.use('/todo',todoHandler)
+
 const port = process.env.PORT || 6000
 
-app.listen(port, (req, res) => {
+app.listen(port, () => {
     console.log(`server is running in ${port}`)
 })

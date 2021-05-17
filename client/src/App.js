@@ -8,28 +8,26 @@ import LogOut from './components/LogOut';
 
 
 function App() {
-  return (
+	return (
 		<BrowserRouter>
 			<ChakraProvider>
 				<Container
-					maxW='sm'
-					bgColor='pink.100'
-					padding='4'
-					borderRadius='sm'
-          mt='5'>
-          <Header/>
-          <Switch>
+						maxW='sm'
+						bgColor='pink.100'
+						padding='4'
+						borderRadius='sm'
+				mt='5'>
+					<Header/>
+					<Switch>
 						<Route exact path='/'>
 							<HomePage />
 						</Route>
 						<Route path='/sign-in'>
 							<SignIn />
-            </Route>
-            <Route path="/todolist" component={Todolist} />
-            <Route path="/log-out" component={LogOut} />
+						</Route>
+						<Route path="/todolist" component={Todolist} />
+						<Route path="/log-out" component={LogOut} />
 					</Switch>
-					{/* <Header />
-					<HomePage /> */}
 				</Container>
 			</ChakraProvider>
 		</BrowserRouter>
