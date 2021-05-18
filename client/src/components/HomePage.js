@@ -6,10 +6,7 @@ import { Link } from 'react-router-dom'
 const HomePage = () => {
     return (
         <Flex flexDirection="column" >
-            <Button mb="2" fontWeight="bold">
-                <Link to="/sign-in">Sign In</Link>
-            </Button>
-            <Button fontWeight="bold"><Link to="/log-out">Log Out</Link></Button>
+            <h1>Get's Started</h1>
         </Flex>
     )
 }
